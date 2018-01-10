@@ -26,6 +26,7 @@ def turn(board)
   board = board
   puts "Please enter 1-9:"
   index = input_to_index(gets.chomp)
-  valid_move?(board, index)
-  until valid_move
+  until valid_move?(board, index) == true
+    turn(board)
+  end
 end
