@@ -18,13 +18,14 @@ def valid_move?(board, index)
   if board[index] == 'X' || board[index] == 'O'
     return false
   elsif index >=0 && index <=8
-      return true
+    return true
   end
 end
 
 def turn(board)
+  board = board
   puts "Please enter 1-9:"
   index = input_to_index(gets.chomp)
   valid_move?(board, index)
-
+  until valid_move
 end
